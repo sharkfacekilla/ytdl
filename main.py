@@ -9,15 +9,12 @@ def download(link, output):
 
     output_file = os.path.join(output, video.title + ".mp4")
 
-    if os.path.exists(output_file):
-        print(f"{video.title}.mp4 already exists.")
-    else:
-        try:
-            print("Download started")
-            video.download(output)
-            print("\nDownload is completed and saved to: " + output)
-        except:
-            print("An error has occurred during downloading. Try again.")
+    try:
+        print("Download started")
+        video.download(output)
+        print("\nDownload is completed and", output_file, " saved to: " + output)
+    except:
+        print("An error has occurred during downloading. Try again.")
 
 
 link = input("Enter the Link: ")
