@@ -1,4 +1,1 @@
-"#ytdl" 
-# FOR EDUCATIONAL PURPOSES
-
-Simple downloader with progress bar. Made for practice. 
+simple downloader with progress bar. made for practice. 
