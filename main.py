@@ -15,7 +15,7 @@ def download(link, output):
         try:
             print("Download started")
             video.download(output)
-            print("\nDownload is completed and saved to" + output)
+            print("\nDownload is completed and saved to: " + output)
         except:
             print("An error has occurred during downloading. Try again.")
 
