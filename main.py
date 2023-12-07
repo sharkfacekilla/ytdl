@@ -7,12 +7,12 @@ def download(link, output):
     vid = YouTube(link, on_progress_callback=on_progress)
     video = vid.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first()
 
-    output_file = os.path.join(output, video.title + ".mp4")
+    output_file = os.path.join(video.title + ".mp4")
 
     try:
         print("Download started")
         video.download(output)
-        print("\nDownload is completed and", output_file, " saved to: " + output)
+        print("\nDownload is completed and", output_file, " was saved to: " + output)
     except:
         print("An error has occurred during downloading. Try again.")
 
